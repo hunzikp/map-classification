@@ -5,7 +5,7 @@ The code is very much work in progress.
 It's currently just a collection of classes and methods, distributed across several stand-alone modules that have proven useful for my own work.
 If it turns out to be sufficiently generic, I might package this eventually.
 
-Your happily invited to contribute, just leave me a message!
+You're happily invited to contribute, just leave me a message!
 
 
 ## Pixel Classification
