@@ -74,7 +74,7 @@ cv2.imwrite('data/iraq_classified.png', final_im)
 This is the end result:
 
 ![Iraq Pixel Classified]
-(https://raw.githubusercontent.com/hunzikp/map-classification/data/iraq_classified.png)
+(https://raw.githubusercontent.com/hunzikp/map-classification/master/data/iraq_classified.png)
 
 
 ## Character Detection and Recognition
@@ -134,7 +134,7 @@ cv2.imwrite("data/iraq_characters.png", labeled_im)
 ```
 
 ![Iraq Pixel Classified]
-(https://raw.githubusercontent.com/hunzikp/map-classification/data/iraq_characters.png)
+(https://raw.githubusercontent.com/hunzikp/map-classification/master/data/iraq_characters.png)
 
 Overall, the general-purpose classifier appears to work fairly well.
 The occasional false positive can easily be removed in later processing steps, since these are isolated letters.
