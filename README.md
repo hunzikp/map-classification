@@ -52,7 +52,7 @@ That is, we estimate a number of candidate models using different input paramete
 The tune method takes several lists with parameter ranges as an input, and all possible permutations of these input parameters are swept.
 The model that is being fitted under the hood is a random forest classifier, and the first list passed to the tune method (n_estimators_list) refers to the number of trees to be used in the model.
 All other lists passed to the tune method define the filter to be applied to the input image before it is transformed into tabular training data.
-Applying a filter to the image data prior to classification removes noise from the image, and thus greatly improves performance
+Applying a filter to the image data prior to classification removes noise from the image, and thus greatly improves performance.
 The only currently implemented filter is the bilateral filter, which has proven very useful for a number of applications.
 The final argument, cv, controls the number of folds to be used in cross validation.
 
