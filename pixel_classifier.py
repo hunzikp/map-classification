@@ -1,15 +1,13 @@
-#!/usr/bin/env python
+from __future__ import division
 
 """pixel_classifier.py: Supervised image pixel classification using random forests."""
 
 _author__ = "Philipp Hunziker"
 __license__ = "GNU v.2"
-__version__ = "1.0"
 __maintainer__ = "Philipp Hunziker"
-__email__ = "hunzikp@gmail.com"
+__email__ = "hunzikp[at]gmail.com"
 __status__ = "Development"
 
-from __future__ import division
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import cross_validation
 from itertools import product
