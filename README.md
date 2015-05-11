@@ -25,10 +25,10 @@ target_im = cv2.imread("data/cia_iraq_physiography.jpg")
 
 Next, we load two training images, which were created "by hand" using GIMP. 
 The first image ("data/iraq_train1.png") simply contains largely arbitrary extracts of the target map.
-The second one is a duplicate of the first, but all pixels to be identified in the classification routine are marked with a special color.
-In this case, a perfect green (RGB=[0, 255, 0]), which is never observed in the target map.
+The second one is a duplicate of the first, but all pixels to be identified in the classification routine are marked with an identification color.
+In this case, the identification color is a perfect green (RGB=[0, 255, 0]), which is never observed in the target map.
 These images provide the training data for the classification routine. 
-Once a model is fit using these training data, it may be used to classify any map employing the same coloring scheme.
+Once a model is fitted using these training data, it may be used to classify any map employing the same coloring scheme.
 
 ```python
 # Load training images
@@ -44,10 +44,10 @@ pc = PixelClassifier()
 pc.set_training_images(im_class=class_im, im_orig=unclass_im)
 ```
 
-Perfect green is the default color for identifying the pixels to be classified. 
-In case another color was chosen, it can be set via the lothres and upthres attributes, which specify an according region in the RGB color space.
+Perfect green is the default identification color implemented in the set_training_images method.
+In case another color was chosen for the training images, it can be set via the lothres and upthres attributes, which specify an according region in the RGB color space.
 
-Next, we tune a classification model.
+Next, we identify an appropriate classification model via tuning.
 That is, we estimate a number of candidate models using different input parameters, evaluate their performance using k-fold cross validation and accuracy scores, and select the best one as our pixel classifier.
 The tune method takes several lists with parameter ranges as an input, and all possible permutations of these input parameters are swept.
 The model that is being fitted under the hood is a random forest classifier, and the first list passed to the tune method (n_estimators_list) refers to the number of trees to be used in the model.
